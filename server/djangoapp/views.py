@@ -15,11 +15,14 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-
+def get_bestdeal(request):
+    if request.method == 'GET':
+        return render(request, 'djangoapp/Suggestions.html')
 
 # Create an `about` view to render a static about page
-# def about(request):
-# ...
+def about(request):
+    if request.method == "GET":
+        return render(request, 'djangoapp/about.html')
 
 
 # Create a `contact` view to return a static contact page
@@ -42,7 +45,7 @@ def get_dealerships(request):
     context = {}
     if request.method == "GET":
         return render(request, 'djangoapp/index.html', context)
-
+            
 
 # Create a `get_dealer_details` view to render the reviews of a dealer
 # def get_dealer_details(request, dealer_id):
