@@ -13,6 +13,8 @@ urlpatterns = [
 
     # path for contact us view
     path(route='AboutUs', view=views.about, name='About'),
+    path(route='contactus', view=views.contactus, name='contactus'),
+
     # path for registration
 
     # path for login

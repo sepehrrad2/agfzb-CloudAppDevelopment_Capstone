@@ -19,6 +19,11 @@ def get_bestdeal(request):
     if request.method == 'GET':
         return render(request, 'djangoapp/Suggestions.html')
 
+def contactus(request):
+    if request.method == "GET":
+        return render(request, 'djangoapp/contact.html')
+
+
 # Create an `about` view to render a static about page
 def about(request):
     if request.method == "GET":
